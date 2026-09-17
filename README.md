@@ -62,13 +62,14 @@ Open <http://localhost:8000>. Opening `index.html` directly is not supported bec
 
 In the repository's **Settings → Pages → Build and deployment**, change the existing publishing source to **GitHub Actions**. The current public site is still the original branch-published “Hello World” page; no workflow, Jekyll theme, or `CNAME` was present in the repository. The empty `.nojekyll` file makes the new static-file behavior explicit.
 
-## Adding event-driven refreshes later
+## Event-driven release refreshes
 
-The `workflow_dispatch` trigger already provides the stable entry point. A release workflow in another KongHack repository can later call the GitHub Actions workflow-dispatch API for this repository. That only changes how the existing workflow starts; the generator, data format, and site need no redesign.
+KongHack release workflows call the reusable `KongHack/.github/.github/workflows/refresh-site.yml` workflow after their `release` job succeeds. The reusable workflow uses the organization secret `KONGHACK_PAGES_TOKEN` to dispatch this repository's `pages.yml` workflow, so a published release appears on the site without waiting for the next scheduled run.
+
+The secret contains a fine-grained token restricted to this repository with **Actions: read and write** permission. It is explicitly passed to the reusable workflow rather than inheriting every available secret. The 12-hour schedule remains enabled as an eventual-consistency fallback.
 
 ## Possible follow-ups
 
 - Add the category topics above to repositories, then trim the category fallbacks.
 - Add validated Packagist package links by reading `composer.json` during generation.
-- Trigger this workflow immediately from repository release workflows.
 - Add a custom domain and corresponding `CNAME` if one is chosen.
