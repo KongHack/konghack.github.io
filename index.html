@@ -1,1 +1,92 @@
-Hello World
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KongHack builds focused, dependable open-source tools for modern PHP applications and infrastructure.">
+  <meta name="theme-color" content="#101b18">
+  <title>KongHack · Open-source PHP building blocks</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">Skip to projects</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="KongHack home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>KongHack</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#projects">Projects</a>
+      <a href="#releases">Releases</a>
+      <a class="nav-github" href="https://github.com/KongHack">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Open source, built to compose</p>
+        <h1 id="hero-title">Practical building blocks for <em>modern PHP.</em></h1>
+        <p class="hero-lede">KongHack is a collection of focused libraries and infrastructure maintained for real applications—small enough to understand, solid enough to depend on.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="https://github.com/KongHack">View on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-glyph"><span></span><span></span><span></span></div>
+        <span class="node node-one"></span><span class="node node-two"></span><span class="node node-three"></span>
+      </div>
+    </section>
+
+    <section class="project-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The ecosystem</p>
+          <h2 id="projects-title">Find the right piece.</h2>
+        </div>
+        <p>Libraries, application components, data tools, and infrastructure. Project details are refreshed directly from GitHub.</p>
+      </div>
+
+      <div class="filters" id="category-filters" aria-label="Filter projects"></div>
+      <div class="project-grid" id="project-grid" aria-live="polite" aria-busy="true">
+        <div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div>
+      </div>
+      <p class="data-error" id="data-error" hidden>Project data could not be loaded. Visit the <a href="https://github.com/orgs/KongHack/repositories">KongHack repositories on GitHub</a>.</p>
+    </section>
+
+    <section class="release-section" id="releases" aria-labelledby="releases-title">
+      <div class="section-heading release-heading">
+        <div>
+          <p class="eyebrow">Latest work</p>
+          <h2 id="releases-title">Recent releases.</h2>
+        </div>
+        <p>Published versions from across the organization, newest first.</p>
+      </div>
+      <div class="release-list" id="release-list" aria-live="polite"></div>
+      <a class="text-link" href="https://github.com/orgs/KongHack/repositories">Browse every repository <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow">Built in the open</p>
+      <h2>Useful software starts with a clear problem.</h2>
+      <p>Explore the code, open an issue, or contribute an improvement. Every KongHack project lives in the open on GitHub.</p>
+      <a class="button button-primary" href="https://github.com/KongHack">Meet us on GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>KongHack</span>
+    </a>
+    <p>Open-source tools for the work that matters.</p>
+    <p class="freshness" id="freshness">Metadata refreshes automatically.</p>
+  </footer>
+</body>
+</html>

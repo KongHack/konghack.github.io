@@ -1,0 +1,29 @@
+{
+  "organization": "KongHack",
+  "excludedRepositories": ["konghack.github.io"],
+  "categories": [
+    { "id": "core", "label": "Core", "topic": "konghack-core" },
+    { "id": "application", "label": "Application", "topic": "konghack-application" },
+    { "id": "data", "label": "Data", "topic": "konghack-data" },
+    { "id": "infrastructure", "label": "Infrastructure", "topic": "konghack-infrastructure" },
+    { "id": "other", "label": "Other" }
+  ],
+  "repositories": {
+    "Interfaces": { "category": "core", "featured": true, "order": 10 },
+    "Common": { "category": "core", "featured": true, "order": 20 },
+    "Utilities": { "category": "core", "order": 30 },
+    "Container": { "category": "core", "order": 40 },
+    "Globals": { "category": "core", "order": 50 },
+    "Enums": { "category": "core", "order": 60 },
+    "Error-Handlers": { "category": "core", "order": 70, "displayName": "Error Handlers" },
+    "Object-Manager": { "category": "application", "featured": true, "order": 10, "displayName": "Object Manager" },
+    "Routing": { "category": "application", "order": 20 },
+    "Menu": { "category": "application", "order": 30 },
+    "FormConfig": { "category": "application", "order": 40, "displayName": "Form Config" },
+    "mattermost-php": { "category": "application", "order": 50, "displayName": "Mattermost PHP" },
+    "GearmanAdmin": { "category": "application", "order": 60, "displayName": "Gearman Admin" },
+    "Database": { "category": "data", "featured": true, "order": 10 },
+    "ORM": { "category": "data", "featured": true, "order": 20 },
+    "php-image": { "category": "infrastructure", "featured": true, "order": 10, "displayName": "PHP Image" }
+  }
+}
